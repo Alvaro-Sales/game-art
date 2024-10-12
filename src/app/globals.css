@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bgFilter: rgba(0, 0, 0, 0.4);
+  --bgBar: rgba(255, 255, 255, 0.1);
+  --card: #181818;
+  --text: #222222;
+  --orange: #ff8000;
+  --orangeHover: #ff8000bd;
+  --bgSidebar: #f0f0f0;
+  --background: #f5f5f5;
+  --transition: all 0.3s ease-in-out;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bgFilter: rgba(0, 0, 0, 0.4);
+    --bgBar: rgba(255, 255, 255, 0.1);
+    --card: #181818;
+    --text: #f2f2f2;
+    --orange: #ff8000;
+    --orangeHover: #ff8000bd;
+    --bgSidebar: #333333;
+    --background: #222222;
+    --transition: all 0.3s ease-in-out;
+  }
+}
+
+body {
+  color: var(--text);
+  background: var(--background);
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style do Sidebar */
+.navigation {
+  transition: var(--transition);
+}
+
+.logo, .copy {
+  cursor: default;
+  font-weight: 400;
+  font-style: normal;
+  font-family: 'Marck Script', cursive;
+}
+
+.navigation .list .itemList.active {
+  background: var(--green);
+}
+
+.navigation .list .itemList .link:hover {
+  transition: var(--transition);
+}
+
+
+/* Animação do cubo do erro 404 */
+.container {
+  background-color: #414141;
+}
+
+@keyframes bounce {
+  0%, 100% {
+      translate: 0px 36px;
+  }
+  50% {
+      translate: 0px 46px;
+  }
+}
+
+@keyframes bounce2 {
+  0%, 100% {
+      translate: 0px 46px;
+  }
+  50% {
+      translate: 0px 56px;
+  }
+}
+
+@keyframes umbral {
+  0% {
+      stop-color: rgba(255, 128, 0, 0.18);
+  }
+  50% {
+      stop-color: rgba(255, 128, 0, 0.502);
+  }
+  100% {
+      stop-color: rgba(255, 128, 0, 0.18);
+  }
+}
+
+@keyframes partciles {
+  0%,
+  100% {
+      translate: 0px 16px;
+  }
+  50% {
+      translate: 0px 6px;
+  }
+}
+
+#particles {
+  animation: partciles 4s ease-in-out infinite;
+}
+
+#animatedStop {
+  animation: umbral 4s infinite;
+}
+
+#bounce {
+  animation: bounce 4s ease-in-out infinite;
+  translate: 0px 36px;
+}
+
+#bounce2 {
+  animation: bounce2 4s ease-in-out infinite;
+  translate: 0px 46px;
+  animation-delay: 0.5s;
+}
+
+
+/* Estilo da porcentagem do card guns */
+.skillPer {
+  animation: progress 0.7s ease-in-out forwards;
+}
+@keyframes progress {
+  from {
+        width: 0;
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.tooltip::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  height: 10px;
+  width: 10px;
+  z-index: -1;
+  background-color: var(--orange);
+  transform: translateX(-50%) rotate(45deg);
+}
