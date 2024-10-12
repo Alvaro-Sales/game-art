@@ -11,7 +11,7 @@ export default function Home() {
 	return(
 		<>
 			<main className="w-full max-w-[2000px] h-auto pl-[90px] p-5 flex flex-col items-center justify-center">
-				<h1 className="text-3xl my-7">Your Pets</h1>
+				<h1 className="text-3xl my-7 text-center">Your Pets</h1>
 
 				<div className="w-full h-auto flex items-center justify-center gap-5 flex-wrap">
 					<CardMask 
