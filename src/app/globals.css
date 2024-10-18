@@ -14,21 +14,6 @@
   --transition: all 0.3s ease-in-out;
 }
 
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bgFilter: rgba(0, 0, 0, 0.4);
-    --bgBar: rgba(255, 255, 255, 0.1);
-    --card: #181818;
-    --text: #f2f2f2;
-    --orange: #ff8000;
-    --orangeHover: #ff8000bd;
-    --bgSidebar: #333333;
-    --background: #222222;
-    --transition: all 0.3s ease-in-out;
-  }
-}
-
 body {
   color: var(--text);
   background: var(--background);
